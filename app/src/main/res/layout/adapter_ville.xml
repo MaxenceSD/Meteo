@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginTop="10dp"
+    app:cardBackgroundColor="@color/bleu1"
+    app:cardCornerRadius="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icone_meteo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_meteo_indispo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/nom_ville"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@color/blanc"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icone_meteo"/>
+
+        <TextView
+            android:id="@+id/description_meteo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="13sp"
+            android:textColor="@color/blanc"
+            app:layout_constraintTop_toBottomOf="@id/nom_ville"
+            app:layout_constraintBottom_toTopOf="@id/humidite"
+            app:layout_constraintStart_toEndOf="@id/icone_meteo"/>
+
+        <TextView
+            android:id="@+id/humidite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/blanc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/humidite_icon"/>
+
+        <ImageView
+            android:id="@+id/humidite_icon"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_goutte"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icone_meteo"/>
+
+        <TextView
+            android:id="@+id/pression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/blanc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/humidite"
+            app:layout_constraintEnd_toStartOf="@id/vitesse_vent"/>
+
+        <ImageView
+            android:id="@+id/pression_icone"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_barometre"
+            app:layout_constraintTop_toTopOf="@id/pression"
+            app:layout_constraintBottom_toBottomOf="@id/pression"
+            app:layout_constraintEnd_toStartOf="@id/pression"/>
+
+        <TextView
+            android:id="@+id/vitesse_vent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/blanc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/vent_icone"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_vitesse"
+            app:layout_constraintTop_toTopOf="@id/vitesse_vent"
+            app:layout_constraintBottom_toBottomOf="@id/vitesse_vent"
+            app:layout_constraintEnd_toStartOf="@id/vitesse_vent"/>
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/blanc"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
